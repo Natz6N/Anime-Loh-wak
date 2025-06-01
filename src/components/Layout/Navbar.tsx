@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if(window.screen.width < 768) return; 
       setIsScrolled(window.scrollY > 600);
     };
     window.addEventListener('scroll', handleScroll);
@@ -43,7 +44,7 @@ const Navbar: React.FC = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            {['Home', 'Browse', 'Popular', 'Jadwal', 'Genre List'].map((item, idx) => (
+            {['Home', 'Browse', 'Popular', 'test',  'Jadwal', 'Genre List'].map((item, idx) => (
               <Link
                 key={idx}
                 to={`/${item.toLowerCase().replace(/ /g, '')}`}

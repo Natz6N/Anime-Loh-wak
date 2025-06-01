@@ -7,6 +7,7 @@ import SearchPage from './pages/SearchPage';
 import GenresPage from './pages/GenresPage';
 import GenrePage from './pages/GenrePage';
 import NotFoundPage from './pages/NotFoundPage';
+import AnimeCardss from './pages/TestPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/search" element={<SearchPage />} />
       <Route path="/genres" element={<GenresPage />} />
       <Route path="/genre" element={<GenrePage />} />
+      <Route path="/test" element={<AnimeCardss />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

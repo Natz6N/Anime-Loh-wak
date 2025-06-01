@@ -36,7 +36,7 @@ const AnimeCarousel: React.FC<AnimeCarouselProps> = ({
         <Swiper
           modules={[Navigation]}
           slidesPerView={2}
-          spaceBetween={16}
+          spaceBetween={10}
           navigation={{
             prevEl: '.swiper-button-prev',
             nextEl: '.swiper-button-next',
@@ -45,7 +45,7 @@ const AnimeCarousel: React.FC<AnimeCarouselProps> = ({
             640: { slidesPerView: 3 },
             768: { slidesPerView: 4 },
             1024: { slidesPerView: 5 },
-            1280: { slidesPerView: 6 },
+            1280: { slidesPerView: 7 },
           }}
         >
           {animes.map((anime) => (
