@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
   const [popularAnime, setPopularAnime] = useState<Anime[]>([]);
   const [latestAnime, setLatestAnime] = useState<Anime[]>([]);
   const [animeByGenre, setAnimeByGenre] = useState<Record<Genre, Anime[]>>({} as Record<Genre, Anime[]>);
-  
+  // const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     const fetchData = async () => {
       const popular = await AnimeService.getPopularAnime(10);
@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {latestAnime.slice(0, 10).map((anime) => (
+            {latestAnime.slice(0, 20).map((anime) => (
               <AnimeCard key={anime.id} anime={anime} />
             ))}
           </div>

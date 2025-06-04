@@ -1,3 +1,4 @@
+// AnimeCarousel.tsx - Fixed version
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -32,7 +33,7 @@ const AnimeCarousel: React.FC<AnimeCarouselProps> = ({
         )}
       </div>
       
-      <div className="group relative">
+      <div className="carousel-container relative">
         <Swiper
           modules={[Navigation]}
           slidesPerView={2}
@@ -56,14 +57,14 @@ const AnimeCarousel: React.FC<AnimeCarouselProps> = ({
         </Swiper>
         
         <button
-          className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+          className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg opacity-0 carousel-container-hover:opacity-100 transition-opacity"
           aria-label="Previous slide"
         >
           <ChevronLeft size={24} />
         </button>
         
         <button
-          className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+          className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 p-2 rounded-full shadow-lg opacity-0 carousel-container-hover:opacity-100 transition-opacity"
           aria-label="Next slide"
         >
           <ChevronRight size={24} />

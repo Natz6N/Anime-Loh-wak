@@ -29,7 +29,7 @@ const AnimePage: React.FC = () => {
               '',
               animeData.genres.slice(0, 2) as any,
               1,
-              4
+              4 
             );
             // Filter out the current anime
             setRelatedAnime(related.data.filter(a => a.id !== id));

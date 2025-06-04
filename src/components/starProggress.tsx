@@ -2,9 +2,10 @@ import React from "react";
 
 interface RatingProgressProps {
   rating: number;
+  className?: string; // Optional className for additional styling
 }
 
-const CircleRatingProgress = ({ rating }: RatingProgressProps) => {
+const CircleRatingProgress = ({ rating, className }: RatingProgressProps) => {
   const maxRating = 10;
   const percentage = (rating / maxRating) * 100;
   const radius = 40;
@@ -45,7 +46,7 @@ const CircleRatingProgress = ({ rating }: RatingProgressProps) => {
       </svg>
 
       {/* Rating text in center */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+      <div className={`absolute inset-0 flex flex-col items-center justify-center ${className}`}>
         <span className="text-sm font-bold">{rating.toFixed(1)}</span>
         {/* <span className="text-xs font-light">/ {maxRating}</span> */}
       </div>

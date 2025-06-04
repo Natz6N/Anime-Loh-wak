@@ -52,8 +52,15 @@ export interface AnimeEpisode {
   title: string;
   thumbnail: string;
   duration: string;
+  videoUrl: videoCompress[];
   releaseDate: string;
 }
+export interface videoCompress {
+  id: string;
+  quality: string;
+  url: string;
+  size: string;
+} 
 
 export interface Anime {
   id: string;
@@ -62,9 +69,14 @@ export interface Anime {
   titleJapanese?: string;
   image: string;
   bannerImage?: string;
+  autro: string,
+  intro: string,
+  trailer: string;
+  trailerThumbnail?: string;
   synopsis: string;
   genres: Genre[];
   episodes: AnimeEpisode[];
+  trailerUrl?: string;
   rating: number;
   releaseYear: number;
   status: 'Ongoing' | 'Completed';
